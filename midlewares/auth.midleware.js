@@ -1,6 +1,6 @@
 let db=require('../db')
 module.exports.authMiddleware=(req,res,next)=>{
-    const {userID}=req.cookies;
+    const {userID}=req.signedCookies;
     if(!userID){
         res.redirect('/auth/login')
         return
@@ -10,5 +10,6 @@ module.exports.authMiddleware=(req,res,next)=>{
         res.redirect('/auth/login')
         return
     }
+    res.locals.user=user
     next()
 }

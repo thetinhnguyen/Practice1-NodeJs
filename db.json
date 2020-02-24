@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "name": "Nguyễn Thế Tình",
+      "phone": "0376846295",
+      "id": 1
+    },
+    {
+      "name": "Dinh Phuc Nguyen",
+      "phone": "1123123213",
+      "id": 2
+    },
+    {
+      "name": "Dinh Phuc Nguyenaaaaa",
+      "phone": "1123123213111",
+      "id": 3
+    }
+  ]
+}

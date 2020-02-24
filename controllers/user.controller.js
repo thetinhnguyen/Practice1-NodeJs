@@ -1,4 +1,5 @@
 let db=require('../db')
+const md5=require('md5')
 module.exports.index=(req, res) => {
     res.render("users", {
       users: db.get("users").value(),
@@ -34,6 +35,6 @@ module.exports.search=(req, res) => {
     });
   }
   module.exports.createPost=(req,res)=>{
-    db.get('users').push({...req.body,id: db.get('users').value().length+1}).write()
+    db.get('users').push({...req.body,id: db.get('users').value().length+1,password: md5(req.body.password)}).write()
     res.redirect('/users')
 }

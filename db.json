@@ -4,15 +4,22 @@
       "id": 0,
       "name": "admin",
       "phone": "123456789",
-      "password": "admin",
+      "password": "21232f297a57a5a743894a0e4a801fc3",
       "email": "admin@gmail.com"
     },
     {
       "name": "Nguyễn Thế Tình",
       "phone": "0376846295",
       "email": "tinh121999@gmail.com",
-      "password": "123",
+      "password": "202cb962ac59075b964b07152d234b70",
       "id": 2
+    },
+    {
+      "name": "Nguyen Van A",
+      "phone": "12345",
+      "email": "abc",
+      "password": "202cb962ac59075b964b07152d234b70",
+      "id": 3
     }
   ]
 }

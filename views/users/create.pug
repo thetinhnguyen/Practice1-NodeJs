@@ -1,10 +1,13 @@
 extends ../template/index
 block content
+    if errors
+        each val in errors
+            .alert.alert-danger(role='alert')=val
     form(action="/users/create",method='POST')
         .from-group.mb-3
             label(for='name') Name
-            input#name.form-control(type="text",name='name')
+            input#name.form-control(type="text",name='name', value=values ? values.name : '')
             label(for='phone') Phone
-            input#phone.form-control(type="text",name='phone')
+            input#phone.form-control(type="text",name='phone', value=values ? values.phone : '')
         button.btn.btn-success Create
 

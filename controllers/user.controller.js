@@ -34,7 +34,6 @@ module.exports.search=(req, res) => {
     });
   }
   module.exports.createPost=(req,res)=>{
-   
     db.get('users').push({...req.body,id: db.get('users').value().length+1}).write()
     res.redirect('/users')
 }

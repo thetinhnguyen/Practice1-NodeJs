@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 
 let db=require('./db')
@@ -11,7 +12,7 @@ const port = 3000;
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
-app.use(cookieParser('abshasqyhsaajbsajbsajsbagsb'))
+app.use(cookieParser(process.env.SESSION_SECRET))
 
 app.set("view engine", "pug");
 app.set("views", "./views");

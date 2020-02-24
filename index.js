@@ -2,8 +2,9 @@ const express = require("express");
 
 let db=require('./db')
 const userRoute=require('./routes/user.route')
+const authRoute=require('./routes/auth.route')
 const cookieParser = require('cookie-parser')
- 
+const midleware=require('./midlewares/auth.midleware')
 
 const app = express();
 const port = 3000;
@@ -22,7 +23,8 @@ app.get('/cookie',(req,res,next)=>{
   res.cookie('userID',12345)
   res.send('Hello')
 })
-app.use('/users',userRoute)
+app.use('/users',midleware.authMiddleware,userRoute)
+app.use('/auth',authRoute)
 app.use(express.static('public'))
 app.listen(port, () => {
 

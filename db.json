@@ -1,39 +1,18 @@
 {
   "users": [
     {
-      "name": "Nguyễn Thế Tình",
-      "phone": "0376846295",
-      "id": 1
+      "id": 0,
+      "name": "admin",
+      "phone": "123456789",
+      "password": "admin",
+      "email": "admin@gmail.com"
     },
     {
-      "name": "Dinh Phuc Nguyen",
-      "phone": "1123123213",
+      "name": "Nguyễn Thế Tình",
+      "phone": "0376846295",
+      "email": "tinh121999@gmail.com",
+      "password": "123",
       "id": 2
-    },
-    {
-      "name": "Dinh Phuc Nguyenaaaaa",
-      "phone": "1123123213111",
-      "id": 3
-    },
-    {
-      "name": "aaa",
-      "phone": "aaa",
-      "id": 4
-    },
-    {
-      "name": "Nguyễn Thế Tình",
-      "phone": "0376846295",
-      "id": 5
-    },
-    {
-      "name": "123",
-      "phone": "123",
-      "id": 6
-    },
-    {
-      "name": "Nguyen Van A",
-      "phone": "1123123213aaaaa",
-      "id": 7
     }
   ]
 }

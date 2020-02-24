@@ -1,0 +1,15 @@
+extends ../template/index
+block content
+    h1.my-3 Login
+    if errors
+        each error in errors
+            .alert.alert-danger(role='alert')=error
+    form(action='/auth/login' ,method='POST')
+        .form-group
+            label(for='exampleInputEmail1') Email address
+            input#exampleInputEmail1.form-control(type='email',name='email',value=values ? values.email : '')
+            small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+        .form-group
+            label(for='exampleInputPassword1') Password
+            input#exampleInputPassword1.form-control(type='password',name='password',value=values ? values.password: '')
+        button.btn.btn-primary(type='submit') Login

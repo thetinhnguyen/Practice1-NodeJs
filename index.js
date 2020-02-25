@@ -4,6 +4,7 @@ const express = require("express");
 let db=require('./db')
 const userRoute=require('./routes/user.route')
 const authRoute=require('./routes/auth.route')
+const productsRoute=require('./routes/products.route')
 const cookieParser = require('cookie-parser')
 const midleware=require('./midlewares/auth.midleware')
 
@@ -26,8 +27,8 @@ app.get('/cookie',(req,res,next)=>{
 })
 app.use('/users',midleware.authMiddleware,userRoute)
 app.use('/auth',authRoute)
+app.use('/products',productsRoute)
 app.use(express.static('public'))
 app.listen(port, () => {
-
   console.log(`Example app listening on ${port} `);
 });

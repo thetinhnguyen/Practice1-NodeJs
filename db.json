@@ -20,6 +20,35 @@
       "email": "abc",
       "password": "202cb962ac59075b964b07152d234b70",
       "id": 3
+    },
+    {
+      "name": "Nguyễn Thế Tình",
+      "phone": "0376846295",
+      "email": "acd",
+      "password": "202cb962ac59075b964b07152d234b70",
+      "id": 4
+    },
+    {
+      "name": "Nguyễn Thế Tình",
+      "phone": "0376846295",
+      "email": "abcdf",
+      "password": "202cb962ac59075b964b07152d234b70",
+      "id": 5
+    },
+    {
+      "name": "Nguyễn Thế Tình",
+      "phone": "0376846295",
+      "email": "tinh121999@gmail.com",
+      "password": "202cb962ac59075b964b07152d234b70",
+      "id": 6
+    },
+    {
+      "name": "abcd",
+      "phone": "0376846295",
+      "email": "abcdfg",
+      "password": "202cb962ac59075b964b07152d234b70",
+      "id": 7,
+      "avatar": "uploads/277e8a26ce4c2d8d2f4497c05b3fd0d1"
     }
   ],
   "products": [

@@ -11,6 +11,7 @@ block content
         table.table
             thead
                 tr
+                    td Avatar
                     td Name
                     td Phone
                     td Show
@@ -18,6 +19,8 @@ block content
             tbody
                 each val in users
                     tr
+                        td 
+                            img(src=val.avatar,width='40')
                         td=val.name
                         td=val.phone
                         td 

@@ -35,6 +35,10 @@ module.exports.search=(req, res) => {
     });
   }
   module.exports.createPost=(req,res)=>{
-    db.get('users').push({...req.body,id: db.get('users').value().length+1,password: md5(req.body.password)}).write()
+    db.get('users').push({...req.body,
+      id: db.get('users').value().length+1,
+      password: md5(req.body.password),
+    avatar: req.file.path.split('\\').slice(1).join('/')
+    }).write()
     res.redirect('/users')
 }

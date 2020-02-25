@@ -6,8 +6,14 @@ const userRoute=require('./routes/user.route')
 const authRoute=require('./routes/auth.route')
 const productsRoute=require('./routes/products.route')
 const cartRoute=require('./routes/cart.route')
+const tranferRoute=require('./routes/tranfer.route')
 
 const cookieParser = require('cookie-parser')
+var csrf = require('csurf')
+var bodyParser = require('body-parser')
+var csrfProtection = csrf({ cookie: true })
+module.exports=csrfProtection
+
 const midleware=require('./midlewares/auth.midleware')
 const sessionMidleware=require('./midlewares/session.midleware')
 
@@ -33,6 +39,7 @@ app.use('/users',midleware.authMiddleware,userRoute)
 app.use('/auth',authRoute)
 app.use('/products',productsRoute)
 app.use('/cart',cartRoute)
+app.use('/tranfer',midleware.authMiddleware,tranferRoute)
 app.use(express.static('public'))
 app.listen(port, () => {
   console.log(`Example app listening on ${port} `);

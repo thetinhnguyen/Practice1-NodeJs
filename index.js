@@ -2,17 +2,22 @@ require('dotenv').config()
 const express = require("express");
 
 let db=require('./db')
+
 const userRoute=require('./routes/user.route')
 const authRoute=require('./routes/auth.route')
 const productsRoute=require('./routes/products.route')
 const cartRoute=require('./routes/cart.route')
 const tranferRoute=require('./routes/tranfer.route')
 
+
+
 const cookieParser = require('cookie-parser')
-var csrf = require('csurf')
-var bodyParser = require('body-parser')
-var csrfProtection = csrf({ cookie: true })
-module.exports=csrfProtection
+// var csrf = require('csurf')
+// var bodyParser = require('body-parser')
+// var csrfProtection = csrf({ cookie: true })
+
+var mongoose = require('mongoose');
+mongoose.connect(process.env.NAME_DATABASE, {useNewUrlParser: true});
 
 const midleware=require('./midlewares/auth.midleware')
 const sessionMidleware=require('./midlewares/session.midleware')

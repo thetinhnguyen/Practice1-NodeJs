@@ -8,7 +8,7 @@ const authRoute=require('./routes/auth.route')
 const productsRoute=require('./routes/products.route')
 const cartRoute=require('./routes/cart.route')
 const tranferRoute=require('./routes/tranfer.route')
-
+const productsApiRoute=require('./api/routes/product.route')
 
 
 const cookieParser = require('cookie-parser')
@@ -45,6 +45,7 @@ app.use('/auth',authRoute)
 app.use('/products',productsRoute)
 app.use('/cart',cartRoute)
 app.use('/tranfer',midleware.authMiddleware,tranferRoute)
+app.use('/api/products',productsApiRoute)
 app.use(express.static('public'))
 app.listen(port, () => {
   console.log(`Example app listening on ${port} `);

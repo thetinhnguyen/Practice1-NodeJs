@@ -6,3 +6,8 @@ module.exports.pagination=(req,res,next)=>{
     })
    
 }
+module.exports.createProduct=(req,res)=>{
+    Product.create({...req.body}).then(
+        product=>res.json(product)
+    )
+}
